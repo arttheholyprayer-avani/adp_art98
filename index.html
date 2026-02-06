@@ -68,26 +68,21 @@
       color: #666;
       padding: 40px;
     }
-  </style>
+  <style>
   .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 80px 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 40px;
 }
 
 .grid img {
   width: 100%;
-  height: 260px;
+  aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
-
-.grid img:hover {
-  transform: scale(1.05);
-}
-
+</style>
 </head>
 <body>
 
@@ -121,7 +116,7 @@
 </div>
 
   <h2 style="text-align:center; font-size:40px;">More Moments</h2>
-
+  
 <div class="grid">
   <img src="IMG_1340.jpg">
   <img src="photo2.jpg">
