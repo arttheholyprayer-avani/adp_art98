@@ -1,94 +1,110 @@
-import { motion } from "framer-motion";
-];
-return (
-<div className="min-h-screen bg-black text-white">
-{/* Hero Section */}
-<section className="h-screen relative flex items-center justify-center text-center px-6">
-<img src="photograph.pdf">
-  <img src="IMG_0605.jpg">
-<div className="relative z-10">
-<motion.h1
-initial={{ opacity: 0, y: 40 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 1 }}
-className="text-5xl md:text-7xl font-bold mb-4"
->
-Avani Patel Photography
-</motion.h1>
-<p className="text-lg md:text-xl text-gray-300 mb-8">
-Stories of people, places, and the beauty of India — calm, chaos, joy, and emotion in every frame
-</p>
-<Button className="rounded-2xl px-8 py-4 text-lg">Begin the Journey</Button>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avani Patel Photography</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #ccc;
+      font-size: 22px;
+    }
+
+    .story {
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .story img {
+      width: 100%;
+      max-width: 1100px;
+      height: 70vh;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.7);
+    }
+
+    .title {
+      font-size: 36px;
+      margin-top: 30px;
+    }
+
+    .caption {
+      color: #bbb;
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      padding: 120px 40px;
+      font-size: 20px;
+      color: #ccc;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Avani Patel Photography</h1>
+  <div class="subtitle">
+    People • Places • The Beauty of India
+  </div>
 </div>
-</section>
 
-
-{/* Gallery Section */}
-<div className="text-center mb-12">
-<h2 className="text-4xl font-semibold mb-4">Gallery</h2>
-<p className="text-gray-400">People • Places • The Beauty of India</p>
+<div class="story">
+  <img src="photo1.jpg">
+  <div class="title">Morning Calm</div>
+  <div class="caption">Soft light touching quiet streets as India wakes</div>
 </div>
-<section className="px-6 py-32 space-y-32 max-w-6xl mx-auto">
-{stories.map((story, i) => (
-<motion.div key={i} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} className="space-y-6 text-center">
-<img src={story.src} className="w-full h-[70vh] object-cover rounded-2xl shadow-2xl" />
-<h3 className="text-3xl font-semibold mt-4">{story.title}</h3>
-<p className="text-xl md:text-2xl text-gray-300 italic">{story.caption}</p>
-</motion.div>
-))}
-</section>
-{photos.map((src, i) => (
-<motion.div
-key={i}
-whileHover={{ scale: 1.05 }}
-className="overflow-hidden rounded-2xl shadow-xl"
->
-<img
-src={src}
-alt="Photography sample"
-className="w-full h-72 object-cover"
-/>
-</motion.div>
-))}
-</section>
 
+<div class="story">
+  <img src="photo2.jpg">
+  <div class="title">Everyday Chaos</div>
+  <div class="caption">Crowded lanes full of life and stories</div>
+</div>
 
-{/* About Section */}
-<section className="px-6 py-20 max-w-4xl mx-auto text-center">
-<h2 className="text-4xl font-semibold mb-6">My Vision</h2>
-<p className="text-gray-300 leading-relaxed">
-My photography explores the soul of India — its people, its places, its emotions, and its endless beauty. From peaceful landscapes to bustling streets, from quiet moments to joyful celebrations, I capture emotions you can feel. Each photograph reflects my vision of calm, chaos, happiness, and the deep stories hidden in everyday life.
-</p>
-</section>
+<div class="story">
+  <img src="photo3.jpg">
+  <div class="title">Human Joy</div>
+  <div class="caption">Smiles that carry warmth and emotion</div>
+</div>
 
+<div class="about">
+My photography explores the soul of India — its people, its places, its emotions, and its endless beauty.  
+From peaceful landscapes to bustling streets, from quiet moments to joyful celebrations, I capture emotions you can feel.
+</div>
 
-{/* Contact Section */}
-<section className="px-6 py-20 bg-gray-900 text-center">
-<h2 className="text-4xl font-semibold mb-6">Contact</h2>
-<Card className="max-w-md mx-auto rounded-2xl">
-<CardContent className="p-6 space-y-4">
-<input
-placeholder="Your Name"
-className="w-full p-3 rounded-xl bg-black text-white border border-gray-700"
-/>
-<input
-placeholder="Your Email"
-className="w-full p-3 rounded-xl bg-black text-white border border-gray-700"
-/>
-<textarea
-placeholder="Your Message"
-className="w-full p-3 rounded-xl bg-black text-white border border-gray-700"
-/>
-<Button className="w-full rounded-2xl">Send Message</Button>
-</CardContent>
-</Card>
-</section>
-
-
-{/* Footer */}
-<footer className="py-6 text-center text-gray-500">
-© {new Date().getFullYear()} Avani Patel Photography
+<footer>
+© Avani Patel Photography
 </footer>
-</div>
-);
-}
+
+</body>
+</html>
