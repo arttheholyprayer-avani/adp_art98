@@ -1,55 +1,93 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Avani Patel Photography</title>
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-    section {
-      padding: 120px 40px;
-      text-align: center;
-    }
-    img {
-      width: 100%;
-      max-height: 80vh;
-      object-fit: cover;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 60px;
-    }
-    p {
-      color: #ccc;
-      font-size: 20px;
-    }
-  </style>
-</head>
-<body>
-
-<section>
-  <h1>Avani Patel Photography</h1>
-  <p>People • Places • The Beauty of India</p>
+import { motion } from "framer-motion";
+];
+return (
+<div className="min-h-screen bg-black text-white">
+{/* Hero Section */}
+<section className="h-screen relative flex items-center justify-center text-center px-6">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+<div className="relative z-10">
+<motion.h1
+initial={{ opacity: 0, y: 40 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className="text-5xl md:text-7xl font-bold mb-4"
+>
+Avani Patel Photography
+</motion.h1>
+<p className="text-lg md:text-xl text-gray-300 mb-8">
+Stories of people, places, and the beauty of India — calm, chaos, joy, and emotion in every frame
+</p>
+<Button className="rounded-2xl px-8 py-4 text-lg">Begin the Journey</Button>
+</div>
 </section>
 
-<section>
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-  <p>Calm before the city wakes</p>
+
+{/* Gallery Section */}
+<div className="text-center mb-12">
+<h2 className="text-4xl font-semibold mb-4">Gallery</h2>
+<p className="text-gray-400">People • Places • The Beauty of India</p>
+</div>
+<section className="px-6 py-32 space-y-32 max-w-6xl mx-auto">
+{stories.map((story, i) => (
+<motion.div key={i} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} className="space-y-6 text-center">
+<img src={story.src} className="w-full h-[70vh] object-cover rounded-2xl shadow-2xl" />
+<h3 className="text-3xl font-semibold mt-4">{story.title}</h3>
+<p className="text-xl md:text-2xl text-gray-300 italic">{story.caption}</p>
+</motion.div>
+))}
+</section>
+{photos.map((src, i) => (
+<motion.div
+key={i}
+whileHover={{ scale: 1.05 }}
+className="overflow-hidden rounded-2xl shadow-xl"
+>
+<img
+src={src}
+alt="Photography sample"
+className="w-full h-72 object-cover"
+/>
+</motion.div>
+))}
 </section>
 
-<section>
-  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-  <p>Chaos of everyday life</p>
+
+{/* About Section */}
+<section className="px-6 py-20 max-w-4xl mx-auto text-center">
+<h2 className="text-4xl font-semibold mb-6">My Vision</h2>
+<p className="text-gray-300 leading-relaxed">
+My photography explores the soul of India — its people, its places, its emotions, and its endless beauty. From peaceful landscapes to bustling streets, from quiet moments to joyful celebrations, I capture emotions you can feel. Each photograph reflects my vision of calm, chaos, happiness, and the deep stories hidden in everyday life.
+</p>
 </section>
 
-<section>
-  <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-  <p>Joy in simple moments</p>
+
+{/* Contact Section */}
+<section className="px-6 py-20 bg-gray-900 text-center">
+<h2 className="text-4xl font-semibold mb-6">Contact</h2>
+<Card className="max-w-md mx-auto rounded-2xl">
+<CardContent className="p-6 space-y-4">
+<input
+placeholder="Your Name"
+className="w-full p-3 rounded-xl bg-black text-white border border-gray-700"
+/>
+<input
+placeholder="Your Email"
+className="w-full p-3 rounded-xl bg-black text-white border border-gray-700"
+/>
+<textarea
+placeholder="Your Message"
+className="w-full p-3 rounded-xl bg-black text-white border border-gray-700"
+/>
+<Button className="w-full rounded-2xl">Send Message</Button>
+</CardContent>
+</Card>
 </section>
 
-</body>
-</html>
+
+{/* Footer */}
+<footer className="py-6 text-center text-gray-500">
+© {new Date().getFullYear()} Avani Patel Photography
+</footer>
+</div>
+);
+}
