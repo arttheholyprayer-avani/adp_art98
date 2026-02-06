@@ -1,131 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Avani Patel Photography</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+<title>Avani Patel Photography</title>
 
-    h1 {
-      font-size: 60px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: #ccc;
-      font-size: 22px;
-    }
-
-    .story {
-      padding: 120px 40px;
-      text-align: center;
-    }
-
-    .story img {
-      width: 100%;
-      max-width: 1100px;
-      height: auto;
-      object-fit: contain;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,.7);
-    }
-
-    .title {
-      font-size: 36px;
-      margin-top: 30px;
-    }
-
-    .caption {
-      color: #bbb;
-      font-size: 22px;
-      font-style: italic;
-    }
-
-    .about {
-      max-width: 900px;
-      margin: auto;
-      padding: 120px 40px;
-      font-size: 20px;
-      color: #ccc;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      color: #666;
-      padding: 40px;
-    }
-  <style>
- .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding: 30px;
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
+header{
+  text-align:center;
+  padding:80px 20px;
 }
 
+header h1{
+  font-size:60px;
+  margin:0;
+}
+
+header p{
+  color:#aaa;
+  font-size:18px;
+  margin-top:10px;
+}
+
+.about{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+  font-size:18px;
+  color:#ddd;
+  text-align:center;
+  line-height:1.7;
+}
+
+/* Instagram style grid */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  padding:20px;
+}
+
+.gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* Responsive */
+
+@media(max-width:800px){
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  header h1{
+    font-size:40px;
+  }
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#888;
+}
 </style>
 </head>
+
 <body>
 
-<div class="hero">
-  <h1>Avani Patel Photography</h1>
-  <div class="subtitle">
-    People • Places • The Beauty of India
-  </div>
-</div>
-
-<div class="story">
-  <img src="photo1.jpg">
-  <div class="title">Morning Calm</div>
-  <div class="caption">Soft light touching mountains as India wakes</div>
-</div>
-
-<div class="story">
-  <img src="photo2.png">
-  <div class="title">Music of Water</div>
-  <div class="caption">Rythm clearing chaos.</div>
-</div>
-
-<div class="story">
-  <img src="photo3.JPG">
-  <div class="title">Human Joy</div>
-  <div class="caption">Peace in the mountains.</div>
-</div>
+<header>
+<h1>Avani Patel Photography</h1>
+<p>People • Places • The Beauty of India</p>
+</header>
 
 <div class="about">
-"Capturing the soul of India through its people, places, and hidden rhythms. From the tactile beauty of weathered materials to the joyful energy of street life, my photography is an invitation to feel the pulse of a nation. This is India, seen through a lens that seeks the extraordinary within the ordinary."
+My photography captures the soul of India — its calm, chaos, joy, and emotion.
+Through people, places, and everyday moments, I tell stories that feel cinematic,
+raw, and real.
 </div>
 
-  <h2 style="text-align:center; font-size:40px;">More Moments</h2>
-  
-<div class="grid">
+<!-- PHOTO GRID -->
+
+<div class="gallery">
+  <img src="IMG_0606.JPG">
+  <img src="IMG_0689.jpg">
+  <img src="IMG_0955.jpg">
+  <img src="IMG_1004.jpg">
+  <img src="IMG_1010.jpg">
   <img src="IMG_1340.jpg">
+  <img src="photo1.jpg">
   <img src="photo2.jpg">
-  <img src="IMG_0378.jpg">
-  <img src="fdsa.JPG">
-  <img src="potery.jpg">
-  <img src="IMG_1340.jpg">
+  <img src="photo3.JPG">
 </div>
 
 <footer>
@@ -134,3 +114,4 @@
 
 </body>
 </html>
+
