@@ -16,18 +16,18 @@ body{
 /* HERO */
 
 .hero{
-  min-height:100vh;
+  min-height:70vh;              /* REDUCED from full height */
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:40px 20px;
+  padding:40px 20px 20px;       /* less bottom padding */
 }
 
 .hero h1{
   font-size:64px;
-  margin-bottom:15px;
+  margin-bottom:12px;
   letter-spacing:1px;
 }
 
@@ -36,13 +36,14 @@ body{
   font-size:20px;
   max-width:700px;
   line-height:1.6;
+  margin-bottom:30px;           /* controls gap */
 }
 
 /* SECTIONS */
 
 .sections{
   max-width:1200px;
-  margin:80px auto;
+  margin:40px auto 80px;        /* MUCH LESS top margin */
   padding:0 20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -51,46 +52,54 @@ body{
 
 .section-card{
   position:relative;
-  height:340px;
+  height:300px;
   border-radius:20px;
   overflow:hidden;
   cursor:pointer;
   display:flex;
   align-items:flex-end;
-  transition:transform .3s;
+  justify-content:center;
+  background-size:cover;
+  background-position:center;
+  transition:transform .3s, box-shadow .3s;
 }
 
 .section-card:hover{
   transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Background placeholders */
-
-.arch{
-  background:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2)),
-             url('cover-architecture.jpg') center/cover;
+.section-label{
+  width:100%;
+  text-align:center;
+  padding:20px;
+  font-size:26px;
+  background:rgba(0,0,0,0.55);
 }
 
-.art{
-  background:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2)),
-             url('cover-art.jpeg') center/cover;
+/* CONTACT */
+
+.contact{
+  text-align:center;
+  padding:60px 20px;
+  border-top:1px solid #222;
 }
 
-.photo{
-  background:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2)),
-             url('cover-photography.jpg') center/cover;
+.contact h2{
+  margin-bottom:15px;
 }
 
-.section-card h2{
-  padding:30px;
-  font-size:32px;
+.contact p{
+  color:#ccc;
+  font-size:18px;
+  line-height:1.6;
 }
 
 /* FOOTER */
 
 footer{
   text-align:center;
-  padding:40px;
+  padding:30px;
   color:#777;
 }
 
@@ -99,6 +108,11 @@ footer{
 @media(max-width:800px){
   .hero h1{
     font-size:42px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:60px;
   }
 }
 </style>
@@ -111,8 +125,8 @@ footer{
 <section class="hero">
   <h1>Avani Patel</h1>
   <p>
-    Architecture · Art · Photography<br><br>
-    Exploring form, space, material, and narrative through design and visual storytelling.
+    Architecture • Art • Photography<br><br>
+    Exploring space, form, emotion, and narrative through design and visual storytelling.
   </p>
 </section>
 
@@ -120,18 +134,28 @@ footer{
 
 <section class="sections">
 
-  <div class="section-card arch" onclick="location.href='architecture.html'">
-    <h2>Architecture</h2>
+  <div class="section-card" style="background-image:url('cover-architecture.jpg')" onclick="location.href='architecture.html'">
+    <div class="section-label">Architecture</div>
   </div>
 
-  <div class="section-card art" onclick="location.href='art.html'">
-    <h2>Art</h2>
+  <div class="section-card" style="background-image:url('cover-art.jpg')" onclick="location.href='art.html'">
+    <div class="section-label">Art</div>
   </div>
 
-  <div class="section-card photo" onclick="location.href='photography.html'">
-    <h2>Photography</h2>
+  <div class="section-card" style="background-image:url('cover-photography.jpg')" onclick="location.href='photography.html'">
+    <div class="section-label">Photography</div>
   </div>
 
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>
+    Email: arttheholyprayer@gmail.com<br>
+    Instagram: @avani_p798
+  </p>
 </section>
 
 <footer>
