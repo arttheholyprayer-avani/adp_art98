@@ -3,56 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Architecture – Avani Patel</title>
+<title>Architecture | Avani Patel</title>
 
 <style>
 body{
   margin:0;
-  background:#111;
-  color:#fff;
   font-family:Arial, Helvetica, sans-serif;
+  background:#ffffff;
 }
 
 header{
-  text-align:center;
-  padding:60px 20px;
-}
-
-header a{
-  color:#aaa;
-  text-decoration:none;
-  font-size:14px;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
   padding:40px;
+  text-align:center;
 }
 
-.photo img{
+.projects{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.project{
+  margin-bottom:40px;
+}
+
+.project img{
   width:100%;
-  border-radius:12px;
+  height:auto;
+  border-radius:8px;
+}
+
+.project h3{
+  margin-top:10px;
+}
+
+.back{
+  display:block;
+  margin:30px;
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
+<a href="index.html" class="back">← Back to Home</a>
+
 <header>
-<a href="index.html">← Back</a>
-<h1>Architecture</h1>
-<p>Explorations of space, form, and material</p>
+  <h1>Architecture</h1>
+  <p>Selected academic & professional projects</p>
 </header>
 
-<div class="gallery">
-  <!-- ADD ARCHITECTURE PROJECT IMAGES -->
-  <!--
-  <div class="photo">
-    <img src="architecture/project1.jpg">
+<div class="projects">
+
+  <div class="project">
+    <img src="images/architecture/project1.jpg">
+    <h3>Housing Project</h3>
+    <p>Brief description of the project.</p>
   </div>
-  -->
+
+  <div class="project">
+    <img src="images/architecture/project2.jpg">
+    <h3>Urban Design Studio</h3>
+    <p>Brief description of the project.</p>
+  </div>
+
+  <div class="project">
+    <h3>Complete Architecture Portfolio (PDF)</h3>
+    <a href="pdf/Avani_Patel_Architecture_Portfolio.pdf" target="_blank">
+      View / Download Portfolio
+    </a>
+  </div>
+
 </div>
 
 </body>
