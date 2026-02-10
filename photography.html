@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avani Patel Photography</title>
+
+<style>
+body{
+  margin:0;
+  background:#111;
+  color:#fff;
+  font-family:Arial, Helvetica, sans-serif;
+  scroll-behavior:smooth;
+}
+
+header{
+  text-align:center;
+  padding:70px 20px;
+}
+
+header h1{
+  font-size:55px;
+  margin:0;
+}
+
+header p{
+  color:#aaa;
+  font-size:18px;
+}
+
+/* ABOUT ME SECTION */
+
+.about-section{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.about-section img{
+  width:260px;
+  border-radius:18px;
+}
+
+.about-text{
+  max-width:600px;
+  color:#ddd;
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* Gallery */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  padding:40px;
+}
+
+.photo{
+  text-align:center;
+}
+
+.photo img{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.photo img:hover{
+  transform:scale(1.05);
+}
+
+.photo-title{
+  margin-top:10px;
+  font-size:16px;
+  color:#eee;
+}
+
+/* Lightbox */
+
+.lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  z-index:999;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:75vh;
+  margin-bottom:20px;
+}
+
+.lightbox p{
+  max-width:900px;
+  text-align:center;
+  color:#ccc;
+  font-size:18px;
+}
+
+/* Back to top */
+
+#topBtn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#222;
+  color:#fff;
+  border:none;
+  padding:12px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:18px;
+  opacity:.8;
+}
+
+#topBtn:hover{
+  opacity:1;
+}
+
+/* Contact */
+
+.contact{
+  background:#111;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.contact h2{
+  margin-bottom:15px;
+}
+
+.contact p{
+  color:#ccc;
+  font-size:18px;
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+  header h1{font-size:40px;}
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>"Art, The Holy Prayer"</h1>
+<p class="subtitle-main">Avani Patel Photography</p>
+<p class="subtitle-small">People • Places • The Beauty of India</p>
+  
+</header>
+
+<!-- ABOUT ME WITH PHOTO -->
+
+<div class="about-section">
+
+<img src="profile.PNG">
+
+<div class="about-text">
+Capturing the soul of India through its people, places, and hidden rhythms. 
+From the tactile beauty of weathered materials to the joyful energy of street life, 
+my photography invites you to feel the pulse of a nation.
+</div>
+
+</div>
+
+<!-- PHOTO GALLERY -->
+
+<div class="gallery">
+
+<div class="photo">
+<img loading="lazy" src="IMG_2317.jpg"
+onclick="openLightbox('IMG_2317.jpg','A silhouette of stillness where the Coromandel coast meets the golden haze of a fading day.')">
+<div class="photo-title">Golden Coast Silence</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_2231.jpg"
+onclick="openLightbox('IMG_2231.jpg','A vibrant choreography of colour and shadow, capturing the rhythmic pulse of the Indian street.')">
+<div class="photo-title">Street Symphony</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_2061.jpg"
+onclick="openLightbox('IMG_2061.jpg','Where the horizon dissolves and the human spirit finds its reflection in the tide.')">
+<div class="photo-title">Into the Horizon</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_1998.JPG"
+onclick="openLightbox('IMG_1998.JPG','Boats resting by the river, capturing silence before the day begins.')">
+<div class="photo-title">River Calm</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_1340.jpg"
+onclick="openLightbox('IMG_1340.jpg','Nature and people living in harmony.')">
+<div class="photo-title">Harmony</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_1082.jpg"
+onclick="openLightbox('IMG_1082.jpg','Standing at the threshold of the heavens, where every drop tells a story.')">
+<div class="photo-title">From the Heaven</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_9128.jpeg"
+onclick="openLightbox('IMG_9128.jpeg','A celestial dance of wings and light, where the earth reaches upward in a silent, holy prayer.')">
+<div class="photo-title">Wings of Devotion</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_9139.jpeg"
+onclick="openLightbox('IMG_9139.jpeg','Watching the light dissolve into the deep, finding the sacred in the infinite rhythm of the tide.')">
+<div class="photo-title">Shimmering Solitude</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_9130.jpeg"
+onclick="openLightbox('IMG_9130.jpeg','A celestial choreography of wings and light, where every flight becomes a silent, holy prayer.')">
+<div class="photo-title">The Ascent of Devotion</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_1220.jpg"
+onclick="openLightbox('IMG_1220.jpg','A prayer in stone, marking the threshold where the earth meets the sky in the heart of Meghalaya.')">
+<div class="photo-title">The Silent Sentinel</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_2167.jpg"
+onclick="openLightbox('IMG_2167.jpg','Tracing the weathered geometry of ancient devotion, where every curve tells a story of enduring craftsmanship.')">
+<div class="photo-title">Echoes of the Divine</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_2497.jpg"
+onclick="openLightbox('IMG_2497.jpg','Where the heavens open in a radiant crown, casting ancient silhouettes against the canvas of the divine.')">
+<div class="photo-title">Monuments of the Sky</div>
+</div>
+
+<div class="photo">
+<img loading="lazy" src="IMG_2234.jpg"
+onclick="openLightbox('IMG_2234.jpg','A vibrant dialogue of wind and silk, where every flutter carries a silent prayer into the sky.')">
+<div class="photo-title">Whispers on the Wind</div>
+</div>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+  <p id="lightbox-text"></p>
+</div>
+
+<!-- CONTACT INFO -->
+
+<div class="contact">
+<h2>Contact Me</h2>
+<p>Email:arttheholyprayer@gmail.com</p>
+<p>Instagram: @avani_p798</p>
+</div>
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+© Avani Patel Photography
+</footer>
+
+<script>
+function openLightbox(src,text){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src=src;
+  document.getElementById("lightbox-text").innerText=text;
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>
+
