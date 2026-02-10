@@ -85,7 +85,7 @@ header p{
   margin-bottom:25px;
 }
 
-/* Project images */
+/* Project images (NO CROP, SAME SIZE) */
 
 .project-images{
   display:grid;
@@ -95,6 +95,9 @@ header p{
 
 .project-images img{
   width:100%;
+  height:300px;          /* uniform card height */
+  object-fit:contain;    /* NO CROPPING */
+  background:#000;       /* fills empty space */
   border-radius:14px;
   cursor:pointer;
   transition:0.3s;
@@ -156,22 +159,19 @@ footer{
   <p>Selected Academic & Design Works</p>
 </header>
 
-<!-- ABOUT ME WITH PHOTO -->
+<!-- ABOUT ME -->
 
 <section class="cv-section">
   <h2>About</h2>
 
   <div class="about-wrapper">
-
-    <!-- Replace image name if needed -->
     <img src="architecture-profile.jpg" class="about-photo">
 
     <div class="about-text">
       Architect<br>
       Ahmedabad, India<br><br>
-Dynamic architect with 1 year of freelance experience in Ahmedabad, adept at translating clients' visions into stunning, functional spaces. At VANTARA, I excelled in creating comprehensive project documentation and maintaining strong client relationships through effective communication. Proficient in AutoCAD and skilled in problem-solving, I deliver innovative designs that strike a balance between aesthetics and practicality.
+      Dynamic architect with 1 year of freelance experience in Ahmedabad, adept at translating clients' visions into stunning, functional spaces. At VANTARA, I excelled in creating comprehensive project documentation and maintaining strong client relationships through effective communication. Proficient in AutoCAD and skilled in problem-solving, I deliver innovative designs that strike a balance between aesthetics and practicality.
     </div>
-
   </div>
 </section>
 
@@ -179,43 +179,42 @@ Dynamic architect with 1 year of freelance experience in Ahmedabad, adept at tra
 
 <section class="project">
   <h3>Parametric Pavilion</h3>
-  <div class="project-meta">
-    Urban Insert • 2018 • Ahmedabad
-  </div>
+  <div class="project-meta">Urban Insert • 2018 • Ahmedabad</div>
 
   <div class="project-images">
     <img src="parametric-1.jpg" onclick="openArchLightbox(this.src)">
     <img src="parametric-2.jpg" onclick="openArchLightbox(this.src)">
   </div>
-
-  <section class="project">
-  <h3>Interpretation Centre</h3>
-  <div class="project-meta">
-    Public • 2017 • Nepal 
-  </div>
-
-   <div class="project-images">
-    <img src="interpretation centre.jpg" onclick="openArchLightbox(this.src)">
-    <img src="interpretation centre2.jpg" onclick="openArchLightbox(this.src)">
-     <img src="interpretation centre3.jpg" onclick="openArchLightbox(this.src)">
-     <img src="interpretation centre4.jpg" onclick="openArchLightbox(this.src)">
-  </div>
-
-  <section class="project">
-  <h3>Bopal Bazaar</h3>
-  <div class="project-meta">
-    Public • 2019 • Ahmedabad
-  </div>
-
-    <div class="project-images">
-    <img src="bopal bazaar.jpg" onclick="openArchLightbox(this.src)">
-    <img src="bopal bazaar2.jpg" onclick="openArchLightbox(this.src)">
-     <img src="bopal bazaar3.jpg" onclick="openArchLightbox(this.src)">
-  </div>
-  
 </section>
 
-<!-- PLACEHOLDER FOR NEXT PROJECTS -->
+<!-- PROJECT 02 -->
+
+<section class="project">
+  <h3>Interpretation Centre</h3>
+  <div class="project-meta">Public • 2017 • Nepal</div>
+
+  <div class="project-images">
+    <img src="interpretation centre.jpg" onclick="openArchLightbox(this.src)">
+    <img src="interpretation centre2.jpg" onclick="openArchLightbox(this.src)">
+    <img src="interpretation centre3.jpg" onclick="openArchLightbox(this.src)">
+    <img src="interpretation centre4.jpg" onclick="openArchLightbox(this.src)">
+  </div>
+</section>
+
+<!-- PROJECT 03 -->
+
+<section class="project">
+  <h3>Bopal Bazaar</h3>
+  <div class="project-meta">Public • 2019 • Ahmedabad</div>
+
+  <div class="project-images">
+    <img src="bopal bazaar.jpg" onclick="openArchLightbox(this.src)">
+    <img src="bopal bazaar2.jpg" onclick="openArchLightbox(this.src)">
+    <img src="bopal bazaar3.jpg" onclick="openArchLightbox(this.src)">
+  </div>
+</section>
+
+<!-- MORE -->
 
 <section class="project">
   <h3>More Projects</h3>
