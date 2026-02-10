@@ -8,66 +8,135 @@
 <style>
 body{
   margin:0;
-  background:#f4f1ec;
-  font-family: Arial, Helvetica, sans-serif;
+  background:#0f0f0f;
+  color:#fff;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-header{
-  padding:60px 20px;
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
+  padding:40px 20px;
 }
 
-h1{
-  font-size:42px;
-  margin-bottom:10px;
+.hero h1{
+  font-size:64px;
+  margin-bottom:15px;
+  letter-spacing:1px;
 }
 
-p{
-  font-size:18px;
-  color:#555;
+.hero p{
+  color:#aaa;
+  font-size:20px;
+  max-width:700px;
+  line-height:1.6;
 }
+
+/* SECTIONS */
 
 .sections{
-  display:flex;
-  justify-content:center;
+  max-width:1200px;
+  margin:80px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
-  padding:60px 20px;
-  flex-wrap:wrap;
 }
 
 .section-card{
-  width:280px;
-  height:180px;
-  background:#fff;
-  border-radius:12px;
+  position:relative;
+  height:340px;
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
   display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  text-decoration:none;
-  color:#000;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
-  transition:transform 0.3s;
+  align-items:flex-end;
+  transition:transform .3s;
 }
 
 .section-card:hover{
   transform:translateY(-8px);
+}
+
+/* Background placeholders */
+
+.arch{
+  background:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2)),
+             url('cover-architecture.jpg') center/cover;
+}
+
+.art{
+  background:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2)),
+             url('cover-art.jpg') center/cover;
+}
+
+.photo{
+  background:linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2)),
+             url('cover-photography.jpg') center/cover;
+}
+
+.section-card h2{
+  padding:30px;
+  font-size:32px;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+  .hero h1{
+    font-size:42px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Avani Patel</h1>
-  <p>Architecture · Art · Photography</p>
-</header>
+<!-- HERO -->
 
-<div class="sections">
-  <a href="architecture.html" class="section-card">Architecture</a>
-  <a href="art.html" class="section-card">Art</a>
-  <a href="photography.html" class="section-card">Photography</a>
-</div>
+<section class="hero">
+  <h1>Avani Patel</h1>
+  <p>
+    Architecture · Art · Photography<br><br>
+    Exploring form, space, material, and narrative through design and visual storytelling.
+  </p>
+</section>
+
+<!-- SECTIONS -->
+
+<section class="sections">
+
+  <div class="section-card arch" onclick="location.href='architecture.html'">
+    <h2>Architecture</h2>
+  </div>
+
+  <div class="section-card art" onclick="location.href='art.html'">
+    <h2>Art</h2>
+  </div>
+
+  <div class="section-card photo" onclick="location.href='photography.html'">
+    <h2>Photography</h2>
+  </div>
+
+</section>
+
+<footer>
+© Avani Patel
+</footer>
 
 </body>
 </html>
