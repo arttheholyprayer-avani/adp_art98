@@ -8,74 +8,151 @@
 <style>
 body{
   margin:0;
+  background:#111;
+  color:#fff;
   font-family:Arial, Helvetica, sans-serif;
-  background:#ffffff;
+  scroll-behavior:smooth;
 }
+
+/* HEADER */
 
 header{
-  padding:40px;
   text-align:center;
+  padding:70px 20px;
 }
 
-.projects{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
+header h1{
+  font-size:48px;
+  margin-bottom:10px;
 }
+
+header p{
+  color:#aaa;
+  font-size:18px;
+}
+
+/* CV SECTION */
+
+.cv-section{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+  border-bottom:1px solid #333;
+}
+
+.cv-section h2{
+  margin-bottom:15px;
+}
+
+.cv-section p{
+  color:#ccc;
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* PROJECT SECTION */
 
 .project{
-  margin-bottom:40px;
-}
-
-.project img{
-  width:100%;
-  height:auto;
-  border-radius:8px;
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+  border-bottom:1px solid #222;
 }
 
 .project h3{
-  margin-top:10px;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-.back{
-  display:block;
-  margin:30px;
-  text-decoration:none;
+.project-meta{
+  color:#aaa;
+  font-size:16px;
+  margin-bottom:25px;
+}
+
+/* Project images */
+
+.project-images{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.project-images img{
+  width:100%;
+  border-radius:14px;
+  transition:0.3s;
+}
+
+.project-images img:hover{
+  transform:scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+  header h1{
+    font-size:38px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<a href="index.html" class="back">← Back to Home</a>
-
 <header>
   <h1>Architecture</h1>
-  <p>Selected academic & professional projects</p>
+  <p>Selected Academic & Design Works</p>
 </header>
 
-<div class="projects">
+<!-- SHORT CV -->
 
-  <div class="project">
-    <img src="images/architecture/project1.jpg">
-    <h3>Housing Project</h3>
-    <p>Brief description of the project.</p>
+<section class="cv-section">
+  <h2>About</h2>
+  <p>
+    <!-- EDIT THIS TEXT -->
+    Bachelor of Architecture<br>
+    Ahmedabad, India<br><br>
+    Interested in parametric design, urban insertions, and experimental spatial systems that explore structure, form, and public engagement.
+  </p>
+</section>
+
+<!-- PROJECT 01 -->
+
+<section class="project">
+  <h3>Parametric Pavilion</h3>
+  <div class="project-meta">
+    Urban Insert • 2018 • Ahmedabad
   </div>
 
-  <div class="project">
-    <img src="images/architecture/project2.jpg">
-    <h3>Urban Design Studio</h3>
-    <p>Brief description of the project.</p>
+  <div class="project-images">
+    <!-- Replace image names with your actual files -->
+    <img src="architecture/parametric-1.jpg">
+    <img src="architecture/parametric-2.jpg">
+    <img src="architecture/parametric-3.jpg">
   </div>
+</section>
 
-  <div class="project">
-    <h3>Complete Architecture Portfolio (PDF)</h3>
-    <a href="pdf/Avani_Patel_Architecture_Portfolio.pdf" target="_blank">
-      View / Download Portfolio
-    </a>
+<!-- PLACEHOLDER FOR NEXT PROJECTS -->
+
+<section class="project">
+  <h3>More Projects</h3>
+  <div class="project-meta">
+    Coming Soon
   </div>
+</section>
 
-</div>
+<footer>
+© Avani Patel Architecture
+</footer>
 
 </body>
 </html>
