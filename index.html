@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avani Patel Photography</title>
+<title>Avani Patel – Art, Architecture & Photography</title>
 
 <style>
 body{
@@ -14,22 +14,59 @@ body{
   scroll-behavior:smooth;
 }
 
+/* NAVIGATION */
+
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:18px;
+  position:sticky;
+  top:0;
+  background:#111;
+  z-index:100;
+  border-bottom:1px solid #222;
+}
+
+.nav a{
+  color:#aaa;
+  text-decoration:none;
+  font-size:15px;
+  letter-spacing:1px;
+}
+
+.nav a:hover{
+  color:#fff;
+}
+
+/* HEADER */
+
 header{
   text-align:center;
-  padding:70px 20px;
+  padding:80px 20px;
 }
 
 header h1{
-  font-size:55px;
+  font-size:52px;
   margin:0;
+  font-weight:300;
+  letter-spacing:2px;
 }
 
-header p{
-  color:#aaa;
-  font-size:18px;
+.subtitle-main{
+  color:#ccc;
+  font-size:20px;
+  margin-top:12px;
 }
 
-/* ABOUT ME SECTION */
+.subtitle-small{
+  color:#888;
+  font-size:16px;
+  margin-top:6px;
+  letter-spacing:2px;
+}
+
+/* ABOUT */
 
 .about-section{
   display:flex;
@@ -54,13 +91,35 @@ header p{
   line-height:1.7;
 }
 
-/* Gallery */
+/* SECTIONS */
+
+.section{
+  padding:90px 20px 40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+.section h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.section-intro{
+  text-align:center;
+  color:#888;
+  max-width:700px;
+  margin:0 auto 40px;
+  font-size:17px;
+}
+
+/* GALLERY */
 
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
-  padding:40px;
+  padding:20px;
 }
 
 .photo{
@@ -85,7 +144,7 @@ header p{
   color:#eee;
 }
 
-/* Lightbox */
+/* LIGHTBOX */
 
 .lightbox{
   position:fixed;
@@ -115,7 +174,20 @@ header p{
   font-size:18px;
 }
 
-/* Back to top */
+/* CONTACT */
+
+.contact{
+  background:#111;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.contact p{
+  color:#ccc;
+  font-size:18px;
+}
+
+/* BACK TO TOP */
 
 #topBtn{
   position:fixed;
@@ -128,35 +200,9 @@ header p{
   border-radius:10px;
   cursor:pointer;
   font-size:18px;
-  opacity:.8;
 }
 
-#topBtn:hover{
-  opacity:1;
-}
-
-/* Contact */
-
-.contact{
-  background:#111;
-  padding:60px 20px;
-  text-align:center;
-}
-
-.contact h2{
-  margin-bottom:15px;
-}
-
-.contact p{
-  color:#ccc;
-  font-size:18px;
-}
-
-/* Mobile */
-
-@media(max-width:800px){
-  header h1{font-size:40px;}
-}
+/* FOOTER */
 
 footer{
   text-align:center;
@@ -168,40 +214,70 @@ footer{
 
 <body>
 
+<!-- NAV -->
+<nav class="nav">
+  <a href="#architecture">Architecture</a>
+  <a href="#art">Art</a>
+  <a href="#photography">Photography</a>
+</nav>
+
+<!-- HEADER -->
 <header>
 <h1>"Art, The Holy Prayer"</h1>
-<p class="subtitle-main">Avani Patel Photography</p>
-<p class="subtitle-small">People • Places • The Beauty of India</p>
-  
+<p class="subtitle-main">Avani Patel</p>
+<p class="subtitle-small">Architecture • Art • Photography</p>
 </header>
 
-<!-- ABOUT ME WITH PHOTO -->
-
+<!-- ABOUT -->
 <div class="about-section">
-
 <img src="profile.PNG">
-
 <div class="about-text">
-Capturing the soul of India through its people, places, and hidden rhythms. 
-From the tactile beauty of weathered materials to the joyful energy of street life, 
-my photography invites you to feel the pulse of a nation.
+Exploring space, form, material, and emotion through architecture, art, and photography.  
+My work is rooted in observation — finding the sacred in the everyday and the poetic in structure.
+</div>
 </div>
 
-</div>
+<!-- ARCHITECTURE -->
+<section id="architecture" class="section">
+<h2>Architecture</h2>
+<p class="section-intro">
+Explorations of space, light, material, and human scale.
+</p>
 
-<!-- PHOTO GALLERY -->
+<div class="gallery">
+  <!-- ADD ARCHITECTURE IMAGES HERE -->
+  <!-- <img src="architecture/arch1.jpg"> -->
+</div>
+</section>
+
+<!-- ART -->
+<section id="art" class="section">
+<h2>Art</h2>
+<p class="section-intro">
+Personal expressions through drawing, painting, and visual experimentation.
+</p>
+
+<div class="gallery">
+  <!-- ADD ART IMAGES HERE -->
+</div>
+</section>
+
+<!-- PHOTOGRAPHY -->
+<section id="photography" class="section">
+<h2>Photography</h2>
+<p class="section-intro">
+People, places, and fleeting moments captured in quiet truth.
+</p>
 
 <div class="gallery">
 
 <div class="photo">
-<img loading="lazy" src="IMG_2317.jpg"
-onclick="openLightbox('IMG_2317.jpg','A silhouette of stillness where the Coromandel coast meets the golden haze of a fading day.')">
+<img src="IMG_2317.jpg" onclick="openLightbox(this.src,'A silhouette of stillness where the Coromandel coast meets the golden haze of a fading day.')">
 <div class="photo-title">Golden Coast Silence</div>
 </div>
 
 <div class="photo">
-<img loading="lazy" src="IMG_2231.jpg"
-onclick="openLightbox('IMG_2231.jpg','A vibrant choreography of colour and shadow, capturing the rhythmic pulse of the Indian street.')">
+<img src="IMG_2231.jpg" onclick="openLightbox(this.src,'A vibrant choreography of colour and shadow, capturing the rhythmic pulse of the Indian street.')">
 <div class="photo-title">Street Symphony</div>
 </div>
 
@@ -271,43 +347,38 @@ onclick="openLightbox('IMG_2234.jpg','A vibrant dialogue of wind and silk, where
 <div class="photo-title">Whispers on the Wind</div>
 </div>
 
+<!-- ADD MORE PHOTOS SAME WAY -->
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact">
+<p>Email: arttheholyprayer@gmail.com</p>
+<p>Instagram: @avani_p798</p>
 </div>
 
-<!-- LIGHTBOX -->
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+© Avani Patel
+</footer>
+
+<script>
+function openLightbox(src,text){
+  document.getElementById("lightbox-img").src = src;
+  document.getElementById("lightbox-text").innerText = text;
+  document.getElementById("lightbox").style.display = "flex";
+}
+function closeLightbox(){
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
   <p id="lightbox-text"></p>
 </div>
 
-<!-- CONTACT INFO -->
-
-<div class="contact">
-<h2>Contact Me</h2>
-<p>Email:arttheholyprayer@gmail.com</p>
-<p>Instagram: @avani_p798</p>
-</div>
-
-<!-- BACK TO TOP -->
-
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-<footer>
-© Avani Patel Photography
-</footer>
-
-<script>
-function openLightbox(src,text){
-  document.getElementById("lightbox").style.display="flex";
-  document.getElementById("lightbox-img").src=src;
-  document.getElementById("lightbox-text").innerText=text;
-}
-
-function closeLightbox(){
-  document.getElementById("lightbox").style.display="none";
-}
-</script>
-
 </body>
 </html>
-
