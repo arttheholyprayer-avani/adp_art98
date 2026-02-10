@@ -16,18 +16,18 @@ body{
 /* HERO */
 
 .hero{
-  min-height:70vh;              /* REDUCED from full height */
+  min-height:55vh;                 /* reduced */
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:40px 20px 20px;       /* less bottom padding */
+  padding:20px 20px 10px;          /* tighter spacing */
 }
 
 .hero h1{
   font-size:64px;
-  margin-bottom:12px;
+  margin-bottom:10px;
   letter-spacing:1px;
 }
 
@@ -36,14 +36,14 @@ body{
   font-size:20px;
   max-width:700px;
   line-height:1.6;
-  margin-bottom:30px;           /* controls gap */
+  margin-bottom:18px;              /* reduced gap */
 }
 
 /* SECTIONS */
 
 .sections{
   max-width:1200px;
-  margin:40px auto 80px;        /* MUCH LESS top margin */
+  margin:20px auto 35px;           /* reduced top & bottom */
   padding:0 20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -81,12 +81,12 @@ body{
 
 .contact{
   text-align:center;
-  padding:60px 20px;
+  padding:35px 20px;               /* reduced */
   border-top:1px solid #222;
 }
 
 .contact h2{
-  margin-bottom:15px;
+  margin-bottom:12px;
 }
 
 .contact p{
@@ -99,7 +99,7 @@ body{
 
 footer{
   text-align:center;
-  padding:30px;
+  padding:25px;
   color:#777;
 }
 
@@ -112,7 +112,15 @@ footer{
 
   .hero{
     min-height:auto;
-    padding-top:60px;
+    padding-top:50px;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media(min-width:1200px){
+  .hero{
+    min-height:50vh;
   }
 }
 </style>
