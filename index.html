@@ -11,374 +11,78 @@ body{
   background:#111;
   color:#fff;
   font-family:Arial, Helvetica, sans-serif;
-  scroll-behavior:smooth;
 }
-
-/* NAVIGATION */
-
-.nav{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:18px;
-  position:sticky;
-  top:0;
-  background:#111;
-  z-index:100;
-  border-bottom:1px solid #222;
-}
-
-.nav a{
-  color:#aaa;
-  text-decoration:none;
-  font-size:15px;
-  letter-spacing:1px;
-}
-
-.nav a:hover{
-  color:#fff;
-}
-
-/* HEADER */
 
 header{
   text-align:center;
-  padding:80px 20px;
+  padding:100px 20px 60px;
 }
 
 header h1{
   font-size:52px;
-  margin:0;
   font-weight:300;
   letter-spacing:2px;
+  margin:0;
 }
 
-.subtitle-main{
-  color:#ccc;
-  font-size:20px;
+.subtitle{
+  color:#aaa;
   margin-top:12px;
+  font-size:18px;
 }
 
-.subtitle-small{
-  color:#888;
-  font-size:16px;
-  margin-top:6px;
-  letter-spacing:2px;
-}
-
-/* ABOUT */
-
-.about-section{
+.sections{
   display:flex;
   flex-wrap:wrap;
-  align-items:center;
   justify-content:center;
-  gap:40px;
-  max-width:1100px;
-  margin:auto;
+  gap:30px;
   padding:60px 20px;
 }
 
-.about-section img{
-  width:260px;
-  border-radius:18px;
-}
-
-.about-text{
-  max-width:600px;
-  color:#ddd;
-  font-size:18px;
-  line-height:1.7;
-}
-
-/* SECTIONS */
-
-.section{
-  padding:90px 20px 40px;
-  max-width:1400px;
-  margin:auto;
-}
-
-.section h2{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.section-intro{
-  text-align:center;
-  color:#888;
-  max-width:700px;
-  margin:0 auto 40px;
-  font-size:17px;
-}
-
-/* GALLERY */
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-  padding:20px;
-}
-
-.photo{
-  text-align:center;
-}
-
-.photo img{
-  width:100%;
-  height:auto;
-  border-radius:14px;
-  cursor:pointer;
+.section-card{
+  width:280px;
+  height:180px;
+  border:1px solid #333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#fff;
+  font-size:22px;
+  letter-spacing:1px;
   transition:0.3s;
 }
 
-.photo img:hover{
-  transform:scale(1.05);
-}
-
-.photo-title{
-  margin-top:10px;
-  font-size:16px;
-  color:#eee;
-}
-
-/* LIGHTBOX */
-
-.lightbox{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.95);
-  display:none;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  z-index:999;
-}
-
-.lightbox img{
-  max-width:90%;
-  max-height:75vh;
-  margin-bottom:20px;
-}
-
-.lightbox p{
-  max-width:900px;
-  text-align:center;
-  color:#ccc;
-  font-size:18px;
-}
-
-/* CONTACT */
-
-.contact{
-  background:#111;
-  padding:60px 20px;
-  text-align:center;
-}
-
-.contact p{
-  color:#ccc;
-  font-size:18px;
-}
-
-/* BACK TO TOP */
-
-#topBtn{
-  position:fixed;
-  bottom:25px;
-  right:25px;
+.section-card:hover{
   background:#222;
-  color:#fff;
-  border:none;
-  padding:12px 16px;
-  border-radius:10px;
-  cursor:pointer;
-  font-size:18px;
+  transform:translateY(-6px);
 }
-
-/* FOOTER */
 
 footer{
   text-align:center;
   padding:40px;
-  color:#888;
+  color:#777;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="#architecture">Architecture</a>
-  <a href="#art">Art</a>
-  <a href="#photography">Photography</a>
-</nav>
-
-<!-- HEADER -->
 <header>
 <h1>"Art, The Holy Prayer"</h1>
-<p class="subtitle-main">Avani Patel</p>
-<p class="subtitle-small">Architecture • Art • Photography</p>
+<p class="subtitle">Avani Patel</p>
+<p class="subtitle">Architecture • Art • Photography</p>
 </header>
 
-<!-- ABOUT -->
-<div class="about-section">
-<img src="profile.PNG">
-<div class="about-text">
-Exploring space, form, material, and emotion through architecture, art, and photography.  
-My work is rooted in observation — finding the sacred in the everyday and the poetic in structure.
+<div class="sections">
+  <a href="architecture.html" class="section-card">Architecture</a>
+  <a href="art.html" class="section-card">Art</a>
+  <a href="photography.html" class="section-card">Photography</a>
 </div>
-</div>
-
-<!-- ARCHITECTURE -->
-<section id="architecture" class="section">
-<h2>Architecture</h2>
-<p class="section-intro">
-Explorations of space, light, material, and human scale.
-</p>
-
-<div class="gallery">
-  <!-- ADD ARCHITECTURE IMAGES HERE -->
-  <!-- <img src="architecture/arch1.jpg"> -->
-</div>
-</section>
-
-<!-- ART -->
-<section id="art" class="section">
-<h2>Art</h2>
-<p class="section-intro">
-Personal expressions through drawing, painting, and visual experimentation.
-</p>
-
-<div class="gallery">
-  <!-- ADD ART IMAGES HERE -->
-</div>
-</section>
-
-<!-- PHOTOGRAPHY -->
-<section id="photography" class="section">
-<h2>Photography</h2>
-<p class="section-intro">
-People, places, and fleeting moments captured in quiet truth.
-</p>
-
-<div class="gallery">
-
-<div class="photo">
-<img src="IMG_2317.jpg" onclick="openLightbox(this.src,'A silhouette of stillness where the Coromandel coast meets the golden haze of a fading day.')">
-<div class="photo-title">Golden Coast Silence</div>
-</div>
-
-<div class="photo">
-<img src="IMG_2231.jpg" onclick="openLightbox(this.src,'A vibrant choreography of colour and shadow, capturing the rhythmic pulse of the Indian street.')">
-<div class="photo-title">Street Symphony</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_2061.jpg"
-onclick="openLightbox('IMG_2061.jpg','Where the horizon dissolves and the human spirit finds its reflection in the tide.')">
-<div class="photo-title">Into the Horizon</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_1998.JPG"
-onclick="openLightbox('IMG_1998.JPG','Boats resting by the river, capturing silence before the day begins.')">
-<div class="photo-title">River Calm</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_1340.jpg"
-onclick="openLightbox('IMG_1340.jpg','Nature and people living in harmony.')">
-<div class="photo-title">Harmony</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_1082.jpg"
-onclick="openLightbox('IMG_1082.jpg','Standing at the threshold of the heavens, where every drop tells a story.')">
-<div class="photo-title">From the Heaven</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_9128.jpeg"
-onclick="openLightbox('IMG_9128.jpeg','A celestial dance of wings and light, where the earth reaches upward in a silent, holy prayer.')">
-<div class="photo-title">Wings of Devotion</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_9139.jpeg"
-onclick="openLightbox('IMG_9139.jpeg','Watching the light dissolve into the deep, finding the sacred in the infinite rhythm of the tide.')">
-<div class="photo-title">Shimmering Solitude</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_9130.jpeg"
-onclick="openLightbox('IMG_9130.jpeg','A celestial choreography of wings and light, where every flight becomes a silent, holy prayer.')">
-<div class="photo-title">The Ascent of Devotion</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_1220.jpg"
-onclick="openLightbox('IMG_1220.jpg','A prayer in stone, marking the threshold where the earth meets the sky in the heart of Meghalaya.')">
-<div class="photo-title">The Silent Sentinel</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_2167.jpg"
-onclick="openLightbox('IMG_2167.jpg','Tracing the weathered geometry of ancient devotion, where every curve tells a story of enduring craftsmanship.')">
-<div class="photo-title">Echoes of the Divine</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_2497.jpg"
-onclick="openLightbox('IMG_2497.jpg','Where the heavens open in a radiant crown, casting ancient silhouettes against the canvas of the divine.')">
-<div class="photo-title">Monuments of the Sky</div>
-</div>
-
-<div class="photo">
-<img loading="lazy" src="IMG_2234.jpg"
-onclick="openLightbox('IMG_2234.jpg','A vibrant dialogue of wind and silk, where every flutter carries a silent prayer into the sky.')">
-<div class="photo-title">Whispers on the Wind</div>
-</div>
-
-<!-- ADD MORE PHOTOS SAME WAY -->
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<div class="contact">
-<p>Email: arttheholyprayer@gmail.com</p>
-<p>Instagram: @avani_p798</p>
-</div>
-
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <footer>
 © Avani Patel
 </footer>
-
-<script>
-function openLightbox(src,text){
-  document.getElementById("lightbox-img").src = src;
-  document.getElementById("lightbox-text").innerText = text;
-  document.getElementById("lightbox").style.display = "flex";
-}
-function closeLightbox(){
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-  <p id="lightbox-text"></p>
-</div>
 
 </body>
 </html>
