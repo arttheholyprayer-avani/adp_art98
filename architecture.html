@@ -81,11 +81,34 @@ header p{
 .project-images img{
   width:100%;
   border-radius:14px;
+  cursor:pointer;
   transition:0.3s;
 }
 
 .project-images img:hover{
   transform:scale(1.03);
+}
+
+/* LIGHTBOX */
+
+.arch-lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.arch-lightbox img{
+  max-width:95%;
+  max-height:90vh;
+  border-radius:12px;
+  cursor:zoom-out;
 }
 
 /* FOOTER */
@@ -118,7 +141,6 @@ footer{
 <section class="cv-section">
   <h2>About</h2>
   <p>
-    <!-- EDIT THIS TEXT -->
     Architect<br>
     Ahmedabad, India<br><br>
     Interested in parametric design, urban insertions, and experimental spatial systems that explore structure, form, and public engagement.
@@ -133,25 +155,39 @@ footer{
     Urban Insert • 2018 • Ahmedabad
   </div>
 
- <div class="project-images">
-  <img src="parametric-1.jpg">
-  <img src="parametric-2.jpg">
-</div>
-
+  <div class="project-images">
+    <img src="parametric-1.jpg" onclick="openArchLightbox(this.src)">
+    <img src="parametric-2.jpg" onclick="openArchLightbox(this.src)">
+  </div>
 </section>
 
-<!-- PLACEHOLDER FOR NEXT PROJECTS -->
+<!-- PLACEHOLDER -->
 
 <section class="project">
   <h3>More Projects</h3>
-  <div class="project-meta">
-    Coming Soon
-  </div>
+  <div class="project-meta">Coming Soon</div>
 </section>
 
 <footer>
 © Avani Patel Architecture
 </footer>
+
+<!-- LIGHTBOX -->
+
+<div class="arch-lightbox" id="archLightbox" onclick="closeArchLightbox()">
+  <img id="archLightboxImg">
+</div>
+
+<script>
+function openArchLightbox(src){
+  document.getElementById("archLightbox").style.display = "flex";
+  document.getElementById("archLightboxImg").src = src;
+}
+
+function closeArchLightbox(){
+  document.getElementById("archLightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
