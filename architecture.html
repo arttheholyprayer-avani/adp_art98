@@ -31,23 +31,38 @@ header p{
   font-size:18px;
 }
 
-/* CV SECTION */
+/* ABOUT / CV SECTION */
 
 .cv-section{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
   padding:60px 20px;
   border-bottom:1px solid #333;
 }
 
 .cv-section h2{
-  margin-bottom:15px;
+  margin-bottom:25px;
 }
 
-.cv-section p{
+/* About layout */
+
+.about-wrapper{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.about-photo{
+  width:220px;
+  border-radius:18px;
+}
+
+.about-text{
   color:#ccc;
   font-size:18px;
   line-height:1.7;
+  max-width:600px;
 }
 
 /* PROJECT SECTION */
@@ -125,6 +140,11 @@ footer{
   header h1{
     font-size:38px;
   }
+
+  .about-wrapper{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 </head>
@@ -136,15 +156,23 @@ footer{
   <p>Selected Academic & Design Works</p>
 </header>
 
-<!-- SHORT CV -->
+<!-- ABOUT ME WITH PHOTO -->
 
 <section class="cv-section">
   <h2>About</h2>
-  <p>
-    Architect<br>
-    Ahmedabad, India<br><br>
-Dynamic architect with 1 year of freelance experience in Ahmedabad, adept at translating clients' visions into stunning, functional spaces. At VANTARA, I excelled in creating comprehensive project documentation and maintaining strong client relationships through effective communication. Proficient in AutoCAD and skilled in problem-solving, I deliver innovative designs that strike a balance between aesthetics and practicality.
-  </p>
+
+  <div class="about-wrapper">
+
+    <!-- Replace image name if needed -->
+    <img src="architecture-profile.jpg" class="about-photo">
+
+    <div class="about-text">
+      Architect<br>
+      Ahmedabad, India<br><br>
+      Interested in parametric design, urban insertions, and experimental spatial systems that explore structure, form, and public engagement.
+    </div>
+
+  </div>
 </section>
 
 <!-- PROJECT 01 -->
@@ -161,7 +189,7 @@ Dynamic architect with 1 year of freelance experience in Ahmedabad, adept at tra
   </div>
 </section>
 
-<!-- PLACEHOLDER -->
+<!-- PLACEHOLDER FOR NEXT PROJECTS -->
 
 <section class="project">
   <h3>More Projects</h3>
@@ -191,4 +219,3 @@ function closeArchLightbox(){
 
 </body>
 </html>
-
